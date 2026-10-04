@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Perfectionism & Procrastination</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f5ff;
+            color: #29233d;
+            line-height: 1.6;
+        }
+
+        header {
+            background: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee8ff;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #7654c6;
+        }
+
+        nav a {
+            color: #4d4268;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #7654c6;
+        }
+
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .small-title {
+            color: #8a68d4;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 60px;
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            color: #6b637b;
+            max-width: 650px;
+            margin: 0 auto 35px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #7654c6;
+            color: white;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            background: #6544b5;
+        }
+
+        .section {
+            background: white;
+            padding: 80px 8%;
+        }
+
+        .section-content {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: #f8f5ff;
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            color: #7654c6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #29233d;
+            color: white;
+            font-size: 14px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+            }
+
+            h1 {
+                font-size: 42px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            Perfectionism & Procrastination
+        </div>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#test">Test</a>
+        </nav>
+    </header>
+
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="small-title">
+                School Research Project
+            </div>
+
+            <h1>
+                Perfectionism<br>
+                & Procrastination
+            </h1>
+
+            <p>
+                Exploring the relationship between perfectionistic tendencies,
+                procrastination and self-control.
+            </p>
+
+            <a class="button" href="#test">
+                Take the test
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <section class="section" id="about">
+
+        <div class="section-content">
+
+            <h2>
+                About the project
+            </h2>
+
+            <p>
+                This research explores how perfectionism and procrastination
+                can influence the way students approach their academic tasks.
+                The project also examines the role of self-control and
+                individual habits.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="section" id="research">
+
+        <div class="section-content">
+
+            <h2>
+                What are we studying?
+            </h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Perfectionism</h3>
+
+                    <p>
+                        The tendency to set very high standards for yourself
+                        and to be strongly concerned about mistakes.
+                    </p>
+                </div>
+
+
+                <div class="card">
+                    <h3>Procrastination</h3>
+
+                    <p>
+                        The tendency to delay tasks even when you know that
+                        completing them may be important.
+                    </p>
+                </div>
+
+
+                <div class="card">
+                    <h3>Self-control</h3>
+
+                    <p>
+                        The ability to regulate your actions, attention and
+                        behaviour in order to achieve a goal.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="section" id="test">
+
+        <div class="section-content">
+
+            <h2>
+                Find out your result
+            </h2>
+
+            <p>
+                Take the questionnaire to find out whether your answers are
+                more strongly associated with perfectionism, procrastination,
+                or a combination of both.
+            </p>
+
+            <br>
+
+            <a class="button" href="#">
+                Start the test
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        School Research Project · 2026
+    </footer>
+
+</body>
+</html>
