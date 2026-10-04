@@ -1,10 +1,11 @@
+```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Perfectionism & Procrastination</title>
+    <title>Perfekcionizmas ir atidėliojimas</title>
 
     <style>
         * {
@@ -13,11 +14,15 @@
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, sans-serif;
             background: #f8f5ff;
             color: #29233d;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         header {
@@ -27,18 +32,24 @@
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #eee8ff;
+            gap: 20px;
         }
 
         .logo {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
             color: #7654c6;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
         nav a {
             color: #4d4268;
             text-decoration: none;
-            margin-left: 25px;
             font-size: 15px;
         }
 
@@ -47,7 +58,7 @@
         }
 
         .hero {
-            min-height: 80vh;
+            min-height: 78vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -56,7 +67,7 @@
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 850px;
         }
 
         .small-title {
@@ -68,15 +79,15 @@
         }
 
         h1 {
-            font-size: 60px;
-            line-height: 1.1;
+            font-size: clamp(38px, 7vw, 64px);
+            line-height: 1.15;
             margin-bottom: 25px;
         }
 
         .hero p {
             font-size: 19px;
             color: #6b637b;
-            max-width: 650px;
+            max-width: 680px;
             margin: 0 auto 35px;
         }
 
@@ -99,6 +110,11 @@
         .section {
             background: white;
             padding: 80px 8%;
+            scroll-margin-top: 20px;
+        }
+
+        .section:nth-of-type(even) {
+            background: #f8f5ff;
         }
 
         .section-content {
@@ -108,6 +124,7 @@
 
         h2 {
             font-size: 36px;
+            line-height: 1.3;
             margin-bottom: 20px;
         }
 
@@ -127,11 +144,18 @@
         .card h3 {
             margin-bottom: 12px;
             color: #7654c6;
+            font-size: 21px;
+        }
+
+        .test-note {
+            color: #6b637b;
+            margin-top: 15px;
+            font-size: 14px;
         }
 
         footer {
             text-align: center;
-            padding: 30px;
+            padding: 30px 20px;
             background: #29233d;
             color: white;
             font-size: 14px;
@@ -140,19 +164,28 @@
         @media (max-width: 700px) {
             header {
                 flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
                 gap: 15px;
             }
 
-            nav a {
-                margin: 0 7px;
-            }
-
-            h1 {
-                font-size: 42px;
+            .hero {
+                min-height: 65vh;
             }
 
             .cards {
                 grid-template-columns: 1fr;
+            }
+
+            h2 {
+                font-size: 30px;
+            }
+
+            .section {
+                padding: 60px 7%;
             }
         }
     </style>
@@ -162,138 +195,125 @@
 
     <header>
         <div class="logo">
-            Perfectionism & Procrastination
+            Perfekcionizmas ir atidėliojimas
         </div>
 
         <nav>
-            <a href="#about">About</a>
-            <a href="#research">Research</a>
-            <a href="#test">Test</a>
+            <a href="#apie">Apie projektą</a>
+            <a href="#tyrimas">Tyrimas</a>
+            <a href="#testas">Testas</a>
         </nav>
     </header>
 
+    <main>
+        <section class="hero">
+            <div class="hero-content">
 
-    <section class="hero">
-
-        <div class="hero-content">
-
-            <div class="small-title">
-                School Research Project
-            </div>
-
-            <h1>
-                Perfectionism<br>
-                & Procrastination
-            </h1>
-
-            <p>
-                Exploring the relationship between perfectionistic tendencies,
-                procrastination and self-control.
-            </p>
-
-            <a class="button" href="#test">
-                Take the test
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <section class="section" id="about">
-
-        <div class="section-content">
-
-            <h2>
-                About the project
-            </h2>
-
-            <p>
-                This research explores how perfectionism and procrastination
-                can influence the way students approach their academic tasks.
-                The project also examines the role of self-control and
-                individual habits.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <section class="section" id="research">
-
-        <div class="section-content">
-
-            <h2>
-                What are we studying?
-            </h2>
-
-            <div class="cards">
-
-                <div class="card">
-                    <h3>Perfectionism</h3>
-
-                    <p>
-                        The tendency to set very high standards for yourself
-                        and to be strongly concerned about mistakes.
-                    </p>
+                <div class="small-title">
+                    Mokslinis tiriamasis darbas
                 </div>
 
+                <h1>
+                    Perfekcionizmas<br>
+                    ir atidėliojimas
+                </h1>
 
-                <div class="card">
-                    <h3>Procrastination</h3>
+                <p>
+                    Kaip perfekcionizmas, savikontrolė ir polinkis atidėlioti
+                    susiję su mokinių mokymusi ir kasdieniais įpročiais?
+                </p>
 
-                    <p>
-                        The tendency to delay tasks even when you know that
-                        completing them may be important.
-                    </p>
-                </div>
-
-
-                <div class="card">
-                    <h3>Self-control</h3>
-
-                    <p>
-                        The ability to regulate your actions, attention and
-                        behaviour in order to achieve a goal.
-                    </p>
-                </div>
+                <a class="button" href="#testas">
+                    Atlikti testą
+                </a>
 
             </div>
+        </section>
 
-        </div>
+        <section class="section" id="apie">
+            <div class="section-content">
 
-    </section>
+                <h2>Apie projektą</h2>
 
+                <p>
+                    Šiame tyrime nagrinėjamas perfekcionizmo ir atidėliojimo
+                    ryšys bei savikontrolės vaidmuo atliekant mokymosi užduotis.
+                    Siekiama geriau suprasti, kaip asmeniniai įpročiai ir
+                    sau keliami reikalavimai gali būti susiję su užduočių
+                    planavimu bei atlikimu.
+                </p>
 
-    <section class="section" id="test">
+            </div>
+        </section>
 
-        <div class="section-content">
+        <section class="section" id="tyrimas">
+            <div class="section-content">
 
-            <h2>
-                Find out your result
-            </h2>
+                <h2>Ką nagrinėjame?</h2>
 
-            <p>
-                Take the questionnaire to find out whether your answers are
-                more strongly associated with perfectionism, procrastination,
-                or a combination of both.
-            </p>
+                <div class="cards">
 
-            <br>
+                    <article class="card">
+                        <h3>Perfekcionizmas</h3>
 
-            <a class="button" href="#">
-                Start the test
-            </a>
+                        <p>
+                            Polinkis sau kelti aukštus reikalavimus ir
+                            stipriai nerimauti dėl klaidų ar netobulo rezultato.
+                        </p>
+                    </article>
 
-        </div>
+                    <article class="card">
+                        <h3>Atidėliojimas</h3>
 
-    </section>
+                        <p>
+                            Polinkis nukelti užduočių atlikimą vėlesniam laikui,
+                            net kai žinoma, kad jas svarbu atlikti.
+                        </p>
+                    </article>
 
+                    <article class="card">
+                        <h3>Savikontrolė</h3>
+
+                        <p>
+                            Gebėjimas reguliuoti savo elgesį ir dėmesį,
+                            siekiant įgyvendinti išsikeltus tikslus.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="testas">
+            <div class="section-content">
+
+                <h2>Sužinok daugiau apie savo įpročius</h2>
+
+                <p>
+                    Atsakyk į klausimus ir susipažink su savo atsakymų
+                    tendencijomis, susijusiomis su perfekcionizmu
+                    bei atidėliojimu.
+                </p>
+
+                <br>
+
+                <a class="button" href="#testas">
+                    Testas netrukus
+                </a>
+
+                <p class="test-note">
+                    Testas dar rengiamas. Jo klausimai ir rezultatų
+                    interpretavimas bus pateikti vėliau.
+                </p>
+
+            </div>
+        </section>
+    </main>
 
     <footer>
-        School Research Project · 2026
+        Mokslinis tiriamasis darbas · 2026
     </footer>
 
 </body>
 </html>
+```
